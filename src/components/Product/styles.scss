@@ -1,0 +1,49 @@
+.product {
+  width: 30vw;
+  height: 30vh;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &-image {
+    background-image: url('https://abnews.am/wp-content/uploads/2022/06/20220218_131116.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  &-description {
+    font-size: 12px;
+    width: 100%;
+
+    &-title {
+      transition: all 500ms ease;
+    }
+
+    &-text {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 500ms ease-in-out;
+    }
+
+    &:hover {
+      .product-description-text {
+        opacity: 1;
+        max-height: 200px;
+        transition: all 500ms ease-in-out;
+        margin-top: -10px;
+      }
+      .product-description-title {
+        opacity: 0;
+      }
+    }
+  }
+}
